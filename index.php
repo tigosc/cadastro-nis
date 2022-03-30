@@ -8,9 +8,8 @@ $query = (isset($_SESSION['query']) ? $_SESSION['query'] : '');
 if ($limpar =='3') {
   $query = '';
   $_SESSION['alerta']= '';
-} else {
-  $query = (isset($_SESSION['query']) ? $_SESSION['query'] : '');
 }
+
 ?>
 
 <div class="container" style="padding:20px">
@@ -42,6 +41,7 @@ if ($limpar =='3') {
   <div class="form-group">
     <?= (!empty($_SESSION['alerta']) ? $_SESSION['alerta'] : '');?>
   </div>
+  
   <?php
     if (isset($query)){ ?>
       <div class="form-group">
